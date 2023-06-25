@@ -1,6 +1,6 @@
 import ContactFound from "./ContactFound";
 
-function ContactList({ contacts, emptyHeading }) {
+function ContactList({ contacts, emptyHeading, onClickInfo }) {
   if (contacts.length === 0) {
     return (
       <>
@@ -34,6 +34,8 @@ function ContactList({ contacts, emptyHeading }) {
               lastName={contact.lastName}
               phone={contact.phone}
               path={contact.profilePicture}
+              onClickInfo={onClickInfo}
+              contact={contact}
             />
           );
         })}

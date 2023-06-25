@@ -7,8 +7,8 @@ import { useContext, useState } from "react";
 import FormContactUpdate from "./components/FormContactUpdate";
 import Header from "./components/header/Header";
 import ContactInfo from "./components/contactInfo/ContactInfo";
-import Messaje from './components/Messaje/Messaje'
-import {useMessajeStore} from './store/messajeStore'
+import Messaje from "./components/Messaje/Messaje";
+import { useMessajeStore } from "./store/messajeStore";
 
 function App() {
   const { addFormActive, updateFormActive, contactSelected } =
@@ -18,11 +18,16 @@ function App() {
   const [infoActive, setInfoActive] = useState(false);
 
   // store messaje
-  const {show} = useMessajeStore()
+  const { show } = useMessajeStore();
 
   return (
     <>
-      <Header  />
+      <Header
+        onClickInfo={(value, active) => {
+          setInfo(value);
+          setInfoActive(active);
+        }}
+      />
       <main className="h-screen w-full mt-14">
         <article className="bg-gray-800 text-gray-50 h-screen overflow-y-scroll container mx-auto contact-list-container main-container">
           <AddContactButton />
@@ -36,14 +41,17 @@ function App() {
       </main>
       {addFormActive && <FormContact />}
       {/* <FormContact /> */}
-      {updateFormActive && (
-        <FormContactUpdate contact={contactSelected} />
-      )}
-      {infoActive ? <ContactInfo onClickInfo={(value, active) => {
-        setInfo(value)
-        setInfoActive(active)
-      } } contact={info} /> : null}
-     {show &&  <Messaje />}
+      {updateFormActive && <FormContactUpdate contact={contactSelected} />}
+      {infoActive ? (
+        <ContactInfo
+          onClickInfo={(value, active) => {
+            setInfo(value);
+            setInfoActive(active);
+          }}
+          contact={info}
+        />
+      ) : null}
+      {show && <Messaje />}
     </>
   );
 }

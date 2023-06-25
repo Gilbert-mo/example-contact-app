@@ -6,7 +6,7 @@ import { BiMicrophone } from "react-icons/bi";
 import { FaEllipsisV } from "react-icons/fa";
 import MessageVoice from "./MessajeVoice";
 
-function Header() {
+function Header(onClickInfo) {
   const { contacts } = useContext(ContactContext);
   let [inputClick, setInputClick] = useState(false);
   let [text, setText] = useState("");
@@ -43,7 +43,7 @@ function Header() {
     }
   };
 
-  const stylesFalse = setStyles(inputClick);
+  const stylesFalse = setStyles(inputClick, onClickInfo);
 
   return (
     <>
@@ -74,6 +74,7 @@ function Header() {
                   onClick={(v) => setInputClick(v)}
                   text={text}
                   setText={setText}
+                  onClickInfo={onClickInfo}
                 />
                 <div
                   className={`${stylesFalse[1]} cursor-pointer ${
