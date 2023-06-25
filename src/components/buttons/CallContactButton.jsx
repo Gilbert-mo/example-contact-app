@@ -2,11 +2,6 @@ import { MdOutlineCall } from "react-icons/md";
 import {useEffect} from 'react'
 
 function CallContactButton({ call, info }) {
-
-  useEffect(() => {
-    console.log('object')
-  }, [])
-
   if (call) {
     return (
       <button className={`flex justify-center items-center flex-col hover:text-blue-500 single-line

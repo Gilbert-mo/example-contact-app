@@ -2,7 +2,7 @@ import { useState } from "react";
 import SearchInupu from "./SearchInput";
 import ContactList from "./ContactList";
 
-function SearchableContactList({ contacts, onClick, text, setText, onClickInfo}) {
+function SearchableContactList({ contacts, onClick, text, setText, onClickInfoFound}) {
   const [searchContact, setSearchContact] = useState("");
   // detectar cuando el input está seleccionado
   let [inputFocusSed, setInputFocusSed] = useState(false);
@@ -47,7 +47,7 @@ function SearchableContactList({ contacts, onClick, text, setText, onClickInfo})
         <ContactList
           contacts={foundContact}
           emptyHeading={`No se encuentra "${searchContact}"`}
-          onClickInfo={onClickInfo}
+          onClickInfoFound={onClickInfoFound}
         />
       )}
     </>

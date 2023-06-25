@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <Header
-        onClickInfo={(value, active) => {
+        onClickInfoFound={(value, active) => {
           setInfo(value);
           setInfoActive(active);
         }}

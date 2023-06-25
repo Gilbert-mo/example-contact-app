@@ -7,7 +7,7 @@ import VideoCall from "../buttons/VideoCall";
 import History from "../buttons/History";
 import { useState } from "react";
 
-function ContactFound({ name, lastName, phone, path, onClickInfo, contact }) {
+function ContactFound({ name, lastName, phone, path, onClickInfoFound, contact }) {
   let [active, setActive] = useState(false);
 
   // onClick={() => onClickInfo(contact, true)}
@@ -25,7 +25,7 @@ function ContactFound({ name, lastName, phone, path, onClickInfo, contact }) {
           }
           className="flex py-4 px-8 pl-3 justify-between hover:cursor-pointer"
         >
-          <div onClick={() => onClickInfo(contact, true)}>
+          <div onClick={() => onClickInfoFound(contact, true)}>
             <Profile path={path} name={name} w={12} mr={5} />
           </div>
           <div className="flex flex-col">
