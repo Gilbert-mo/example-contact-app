@@ -46,48 +46,58 @@ function Header() {
   const stylesFalse = setStyles(inputClick);
 
   return (
-    <header
-      className={
-        inputClick
-          ? "header w-full bg-gray-700 flex justify-center items-center px-1 transition ease delay-100 fixed top-0 z-10"
-          : "header w-full bg-gray-800 flex justify-center items-center py-2 px-3 transition ease delay-200 fixed top-0 z-10"
-      }
-    >
-      <div className="container mx-auto w-full">
-        <div className="logo">
-          <h1>Contactos</h1>
+    <>
+      <header className="bg-orange-600 header">
+        <div className="containe header-container flex">
+          <div className="logo text-white">
+            <h1>Contactos</h1>
+          </div>
+          <section
+            className={
+              inputClick
+                ? " w-full bg-gray-700 flex justify-center items-center px-1 transition ease delay-100"
+                : " w-full bg-gray-800 flex justify-center items-center py-2 px-3 transition ease delay-200"
+            }
+          >
+            <div className="container mx-auto w-full">
+              <div className={`${stylesFalse[0]} transition ease delay-200`}>
+                <div className={`${stylesFalse[1]} cursor-pointer`}>
+                  <button className="sm:text-xl">
+                    <AiOutlineSearch />
+                  </button>
+                </div>
+                <SearchableContactList
+                  contacts={contacts}
+                  onClick={(v) => setInputClick(v)}
+                  text={text}
+                  setText={setText}
+                />
+                <div
+                  className={`${stylesFalse[1]} cursor-pointer ${
+                    active && "text-gray-500"
+                  }`}
+                >
+                  <button
+                    className="sm:text-xl"
+                    disabled={active}
+                    onClick={() => {
+                      handleRecognition();
+                      setActive(true);
+                    }}
+                  >
+                    <BiMicrophone />
+                  </button>
+                </div>
+                <div className={`${stylesFalse[1]} cursor-pointer`}>
+                  <FaEllipsisV />
+                </div>
+              </div>
+            </div>
+            {active && <MessageVoice />}
+          </section>
         </div>
-        <div className={`${stylesFalse[0]} transition ease delay-200`}>
-          <div className={`${stylesFalse[1]} cursor-pointer`}>
-            <button className="sm:text-xl">
-              <AiOutlineSearch />
-            </button>
-          </div>
-          <SearchableContactList
-            contacts={contacts}
-            onClick={(v) => setInputClick(v)}
-            text={text}
-            setText={setText}
-          />
-          <div className={`${stylesFalse[1]} cursor-pointer ${active && 'text-gray-500'}`}>
-            <button
-              className="sm:text-xl"
-              disabled={active}
-              onClick={() => {
-                handleRecognition();
-                setActive(true);
-              }}
-            >
-              <BiMicrophone />
-            </button>
-          </div>
-          <div className={`${stylesFalse[1]} cursor-pointer`}>
-            <FaEllipsisV />
-          </div>
-        </div>
-      </div>
-      {active && <MessageVoice />}
-    </header>
+      </header>
+    </>
   );
 }
 
