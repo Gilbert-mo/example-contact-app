@@ -1,7 +1,7 @@
 import SearchableContactList from "./SearchableContactList";
 import { ContactContext } from "../../contexts/ContactContext";
 import { useContext, useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineMenu, AiOutlineSetting } from "react-icons/ai";
 import { BiMicrophone } from "react-icons/bi";
 import { FaEllipsisV } from "react-icons/fa";
 import MessageVoice from "./MessajeVoice";
@@ -47,16 +47,19 @@ function Header() {
 
   return (
     <>
-      <header className="bg-orange-600 header">
-        <div className="containe header-container flex">
-          <div className="logo text-white">
+      <header className="header bg-slate-800">
+        <div className="header-container flex justify-center items-center mx-auto">
+          <div className="w-10 h-10 shrink-0 text-gray-100 items-center justify-center hover:bg-slate-700 rounded-full active">
+            <button className="text-xl"><AiOutlineMenu /></button>
+          </div>
+          <div className="logo mr-2 text-white w-28 shrink-0 cursor-pointer text-2xl font-light items-center justify-center ml-1 active">
             <h1>Contactos</h1>
           </div>
           <section
             className={
               inputClick
-                ? " w-full bg-gray-700 flex justify-center items-center px-1 transition ease delay-100"
-                : " w-full bg-gray-800 flex justify-center items-center py-2 px-3 transition ease delay-200"
+                ? " w-full bg-gray-700 flex justify-center items-center px-1 transition ease delay-100 grow search-active"
+                : " w-full bg-gray-800 flex justify-center items-center py-2 px-2 transition ease delay-200 grow"
             }
           >
             <div className="container mx-auto w-full">
@@ -95,6 +98,12 @@ function Header() {
             </div>
             {active && <MessageVoice />}
           </section>
+          <div className="w-10 h-10 grow items-center justify-center mr-2 active">
+            <button className="text-gray-100 hover:text-gray-200 text-xl"><AiOutlineSetting /></button>
+          </div>
+          <div className="w-10 h-10 cursor-pointer profile shrink-0 rounded-full mr-3 active">
+            <img src="./src/data/img/profile-acount.jpg" alt="" className="w-full h-full object-cover rounded-full" />
+          </div>
         </div>
       </header>
     </>

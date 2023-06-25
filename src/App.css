@@ -47,29 +47,33 @@ body {
   display: none;
 }
 
-
-
 /* HEADER RESPONSIVE DESIGNE */
 
 .header {
-    position: fixed;
-    z-index: 2000;
-    top: 0;
-    width: 100%;
-    padding: 0;
+  position: fixed;
+  z-index: 400;
+  top: 0;
+  width: 100%;
+  padding: 0;
 }
 
 .logo {
   display: flex;
 }
 
+.header-container {
+  width: 100%;
+  /* padding: 0 10px; */
+  margin: 0 auto;
+}
 
+.header-container .active {
+  display: none;
+}
 
-
-
-
-
-
+.header-container .profile:hover {
+  outline: 5px solid #f5dddd21;
+}
 
 .overflow-scroll::-webkit-scrollbar {
   width: 0;
@@ -260,6 +264,8 @@ body {
   overflow-x: hidden;
 }
 
+/*media querys*/
+
 @media (min-width: 500px) {
   .container-btns {
     display: flex;
@@ -286,11 +292,36 @@ body {
     height: 90%;
   }
 
+  .header-container .active {
+    display: flex;
+  }
+
+  .header-container {
+    padding: 0 10px;
+  }
+
+  .header-container .search-active {
+    margin-right: 6px;
+    border-radius: 5px;
+  }
+
   .form-container-info {
     width: 60%;
     height: 90%;
   }
 }
+
+
+/* .search-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 500;
+    background: #000;
+} */
+
+
 
 @media (min-width: 1200px) {
   .form-container {

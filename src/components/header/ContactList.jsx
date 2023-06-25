@@ -4,6 +4,7 @@ function ContactList({ contacts, emptyHeading }) {
   if (contacts.length === 0) {
     return (
       <>
+        <div className="search-overlay"></div>
         <div className="h-screen">
           <h2 className="text-blue-400 text-2xl sm:text-3xl m-5 font-sans ml-6">{emptyHeading}</h2>;
         </div>

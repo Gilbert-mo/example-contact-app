@@ -19,11 +19,10 @@ function App() {
 
   // store messaje
   const {show} = useMessajeStore()
-  console.log(useMessajeStore())
 
   return (
     <>
-      <Header />
+      <Header  />
       <main className="h-screen w-full mt-14">
         <article className="bg-gray-800 text-gray-50 h-screen overflow-y-scroll container mx-auto contact-list-container main-container">
           <AddContactButton />
