@@ -1,35 +1,35 @@
 export const contacts = [
     {
         id: 1,
-        profilePicture: './src/data/img/gil.jpg',
+        profilePicture: 'src/data/img/gil.jpg',
         name: 'gilbert',
         lastName: 'matos ortiz',
         phone: '8294838668',
         email: 'gilbertmatosortiz@gmail.com'
     }, {
         id: 2,
-        profilePicture: './src/data/img/zabiel.jpg',
+        profilePicture: 'src/data/img/zabiel.jpg',
         name: 'Xaviel',
         lastName: 'Sans',
         phone: '8497568395',
         email: 'elzabieldurodecojones@gmail.com'
     }, {
         id: 3,
-        profilePicture: './src/data/img/natanael.jpg',
+        profilePicture: 'src/data/img/natanael.jpg',
         name: 'natanael',
         lastName: 'matos ortiz',
         phone: '8294897088',
         email: 'francisconatanaelm6@gmail.com'
     }, {
         id: 4,
-        profilePicture: './src/data/img/luffy.jpg',
+        profilePicture: 'src/data/img/luffy.jpg',
         name: 'Alberto Francisco',
         lastName: 'matos mejia',
         phone: '8293895014',
         email: 'franciscoalberto123@gmail.com'
     }, {
         id: 5,
-        profilePicture: './src/data/img/francisco.jpg',
+        profilePicture: 'src/data/img/francisco.jpg',
         name: 'Danielle',
         lastName: 'Mota',
         phone: '809587294',
@@ -85,7 +85,7 @@ export const contacts = [
         email: ''
     }, {
         id: 13,
-        profilePicture: './src/data/img/natanael.jpg',
+        profilePicture: 'src/data/img/natanael.jpg',
         name: 'Carmen',
         lastName: 'Ronaldo',
         phone: '8295836585',
@@ -113,7 +113,7 @@ export const contacts = [
         email: ''
     }, {
         id: 18,
-        profilePicture: './src/data/img/gilbert.jpg',
+        profilePicture: 'src/data/img/gilbert.jpg',
         name: 'Steven',
         lastName: '',
         phone: '8295836585',
@@ -197,7 +197,7 @@ export const contacts = [
         email: ''
     }, {
         id: 30,
-        profilePicture: './src/data/img/gojo.jpg',
+        profilePicture: 'src/data/img/gojo.jpg',
         name: 'Gojo',
         lastName: '',
         phone: '8295836585',
@@ -260,7 +260,7 @@ export const contacts = [
         email: ''
     }, {
         id: 39,
-        profilePicture: './src/data/img/dan.jpg',
+        profilePicture: 'src/data/img/dan.jpg',
         name: 'Daniela',
         lastName: '',
         phone: '8295836585',
