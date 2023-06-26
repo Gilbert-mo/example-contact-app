@@ -1,7 +1,7 @@
 export const contacts = [
     {
         id: 1,
-        profilePicture: 'src/data/img/gil.jpg',
+        profilePicture: 'img/gil.jpg',
         name: 'gilbert',
         lastName: 'matos ortiz',
         phone: '8294838668',
