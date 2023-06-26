@@ -103,7 +103,7 @@ function Header({onClickInfoFound}) {
             <button className="text-gray-100 hover:text-gray-200 text-xl"><AiOutlineSetting /></button>
           </div>
           <div className="w-10 h-10 cursor-pointer profile shrink-0 rounded-full mr-3 active">
-            <img src="./src/data/img/profile-acount.jpg" alt="" className="w-full h-full object-cover rounded-full" />
+            <img src="img/profile-acount.jpg" alt="" className="w-full h-full object-cover rounded-full" />
           </div>
         </div>
       </header>
