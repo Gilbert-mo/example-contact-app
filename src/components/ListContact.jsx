@@ -20,8 +20,8 @@ function ListContact({ onClickInfo }) {
 
   if (contacts.length === 0)
     return (
-      <div className="void">
-        <h1>Lista de Contactos</h1>
+      <div className="void w-full h-screen flex flex-col justify-center items-center">
+        <h1 className="text-2xl text-gray-100">Lista de Contactos</h1>
         <h4>No hay contactos aún</h4>
       </div>
     );

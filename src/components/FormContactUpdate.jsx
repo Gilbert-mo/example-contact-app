@@ -135,7 +135,7 @@ function FormContactUpdate({ contact }) {
             <div className="input-contaiber-box">
               <div className="flex">
                 <div className="w-10 shrink-0 flex items-center justify-center text-gray-50 ">
-                  <label htmlFor="inputPhone" className="cursor-pointer">
+                  <label htmlFor="inputPhone" className="cursor-pointer text-xl">
                     <MdOutlineCall />
                   </label>
                 </div>

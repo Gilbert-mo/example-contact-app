@@ -9,8 +9,8 @@ export const contacts = [
     }, {
         id: 2,
         profilePicture: './src/data/img/zabiel.jpg',
-        name: 'Zabiel Honduras',
-        lastName: 'Sans de la Cruz',
+        name: 'Xaviel',
+        lastName: 'Sans',
         phone: '8497568395',
         email: 'elzabieldurodecojones@gmail.com'
     }, {
@@ -31,14 +31,14 @@ export const contacts = [
         id: 5,
         profilePicture: './src/data/img/francisco.jpg',
         name: 'Danielle',
-        lastName: 'Mota Lopez',
+        lastName: 'Mota',
         phone: '809587294',
         email: 'daniellemoca999@gmail.com'
     }, {
         id: 6,
         profilePicture: '',
-        name: 'Anna Cecilia',
-        lastName: 'de los Santos',
+        name: 'Esteban',
+        lastName: '',
         phone: '8497491634',
         email: 'annita04@gmail.com'
     }, {
@@ -51,7 +51,7 @@ export const contacts = [
     }, {
         id: 8,
         profilePicture: '',
-        name: 'Anabelle',
+        name: 'prijilio',
         lastName: '',
         phone: '8295836585',
         email: ''
@@ -65,8 +65,8 @@ export const contacts = [
     }, {
         id: 10,
         profilePicture: '',
-        name: 'Albert',
-        lastName: 'Eistein',
+        name: 'Alex',
+        lastName: '',
         phone: '8295836585',
         email: ''
     }, {
@@ -80,7 +80,7 @@ export const contacts = [
         id: 12,
         profilePicture: '',
         name: 'Carlos',
-        lastName: 'Ronaldo',
+        lastName: '',
         phone: '8295836585',
         email: ''
     }, {
@@ -100,7 +100,7 @@ export const contacts = [
     }, {
         id: 16,
         profilePicture: '',
-        name: 'Damian',
+        name: 'Debora',
         lastName: '',
         phone: '8295836585',
         email: ''
@@ -149,7 +149,7 @@ export const contacts = [
     }, {
         id: 23,
         profilePicture: '',
-        name: 'Lunden',
+        name: 'Zoltán',
         lastName: '',
         phone: '8295836585',
         email: ''
@@ -164,7 +164,7 @@ export const contacts = [
         id: 25,
         profilePicture: '',
         name: 'Jimmy',
-        lastName: '',
+        lastName: 'matos',
         phone: '8295836585',
         email: ''
     }, {
@@ -184,7 +184,7 @@ export const contacts = [
     }, {
         id: 28,
         profilePicture: '',
-        name: 'John',
+        name: 'jhon',
         lastName: '',
         phone: '8295836585',
         email: ''
@@ -206,7 +206,7 @@ export const contacts = [
         id: 31,
         profilePicture: '',
         name: 'Miguel',
-        lastName: 'Anguel',
+        lastName: '',
         phone: '8295836585',
         email: ''
     }, {
@@ -275,7 +275,7 @@ export const contacts = [
     }, {
         id: 41,
         profilePicture: '',
-        name: 'Zayluna',
+        name: 'Zane',
         lastName: '',
         phone: '8295836585',
         email: ''
@@ -289,14 +289,7 @@ export const contacts = [
     }, {
         id: 43,
         profilePicture: '',
-        name: 'loki',
-        lastName: '',
-        phone: '8295836585',
-        email: ''
-    }, {
-        id: 44,
-        profilePicture: '',
-        name: 'fernando',
+        name: 'Zoe',
         lastName: '',
         phone: '8295836585',
         email: ''

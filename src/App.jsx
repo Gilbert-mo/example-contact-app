@@ -42,7 +42,7 @@ function App() {
       {addFormActive && <FormContact />}
       {/* <FormContact /> */}
       {updateFormActive && <FormContactUpdate contact={contactSelected} />}
-      {infoActive ? (
+      {infoActive && (
         <ContactInfo
           onClickInfo={(value, active) => {
             setInfo(value);
@@ -50,7 +50,7 @@ function App() {
           }}
           contact={info}
         />
-      ) : null}
+      )}
       {show && <Messaje />}
     </>
   );

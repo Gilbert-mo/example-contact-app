@@ -10,6 +10,11 @@ import { useState } from "react";
 function ContactFound({ name, lastName, phone, path, onClickInfoFound, contact }) {
   let [active, setActive] = useState(false);
 
+  // mause hover
+  const handleMouseLeave = () => {
+    setActive(false)
+  }
+
   // onClick={() => onClickInfo(contact, true)}
 
   return (
@@ -17,6 +22,7 @@ function ContactFound({ name, lastName, phone, path, onClickInfoFound, contact }
       className={`hover:bg-gray-700 mx-auto flex w-full flex-col rounded-3xl ${
         active && "bg-gray-700"
       }`}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="flex justify-between items-center">
         <div
@@ -39,7 +45,7 @@ function ContactFound({ name, lastName, phone, path, onClickInfoFound, contact }
           <CallContactButton />
         </div>
       </div>
-      {active ? (
+      {active && (
         <div
           onClick={() => setActive(true)}
           className="py-3 px-8 border-t flex items-center  overflow-scroll container-btns-found"
@@ -48,7 +54,7 @@ function ContactFound({ name, lastName, phone, path, onClickInfoFound, contact }
           <Message message={true} texto={"Enviar mensaje"} />
           <History />
         </div>
-      ) : null}
+      )}
     </section>
   );
 }

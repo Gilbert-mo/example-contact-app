@@ -25,7 +25,7 @@ export function ContactContextProvider({ children }) {
       ...contacts,
       {
         profilePicture: contact.profilePicture,
-        id: contacts.length + 1,
+        id: contact.id,
         name: contact.name,
         lastName: contact.lastName,
         email: contact.email,

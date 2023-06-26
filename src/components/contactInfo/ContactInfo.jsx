@@ -144,7 +144,7 @@ function ContactInfo({ contact, onClickInfo }) {
             </div>
             {/* INFRO WHATSAPP END */}
             <div className="w-full flex flex-col text-center text-sm mt-3">
-              <p>Se agrego el: 12 de mayo de 2022</p>
+              <p>Se agregó el: 12 de mayo de 2022</p>
               <p>(gilbertmatosortiz@gmail.com)</p>
             </div>
           </article>
