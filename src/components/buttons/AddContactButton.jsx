@@ -11,7 +11,7 @@ function AddContactButton() {
       <button onClick={() => {
         setAddFormActive(true)
         setUpdateFormActive(false)
-      }} className='flex justify-center items-center ml-5 md:ml-6 my-5'> < FaUserPlus className='mr-5 text-2xl' />Crear nuevo contacto</button>
+      }} className='flex justify-center items-center ml-5 md:ml-6 my-5'> < FaUserPlus className='mr-5 text-xl' />Crear nuevo contacto</button>
     </div>
   )
 }
