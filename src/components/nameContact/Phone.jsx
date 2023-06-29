@@ -18,7 +18,7 @@ function Phone({ phone, whatsApp, info }) {
       return (
         <div className="flex flex-col text-sm md:text-base justify-start">
           <p className="">{phoneMovil}</p>
-          <p className="ml-1">Móvil</p>
+          <p className="ml-2">Móvil</p>
         </div>
       );
     }

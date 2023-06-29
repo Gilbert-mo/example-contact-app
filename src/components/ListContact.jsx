@@ -31,7 +31,7 @@ function ListContact({ onClickInfo }) {
       {arragementIni.map(([init, arrElements]) => {
         return (
           <section key={init} className="flex items-stretch relative">
-            <div className="w-5 mr-6 md:w-10 pl-6 shrink-0 h-full py-4 mt-2 sticky top-0 font-bold text-blue-500">
+            <div className="w-5 mr-6 md:w-10 pl-6 shrink-0 h-full py-4 mt-2 sticky top-0 font-bold text-blue-400">
               {init}
             </div>
             <div className="flex flex-col grow">

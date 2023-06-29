@@ -35,8 +35,18 @@ function ContactInfo({ contact, onClickInfo }) {
     const divElement = document.getElementById('container-main');
     divElement.addEventListener('scroll', handleScroll);
 
+    // espace close
+    const handleKeyup = (e) => {
+      if (e.key === "Escape") {
+        onClickInfo({}, false)
+      }
+    };
+
+    document.addEventListener("keyup", handleKeyup);
+
     return () => {
       divElement.removeEventListener('scroll', handleScroll);
+      divElement.removeEventListener('keyup', handleKeyup);
     };
   }, []);
 
@@ -44,20 +54,20 @@ function ContactInfo({ contact, onClickInfo }) {
     <>
       <div className="dark-overlay-info"></div>
       <section className="bg-gray-800 fixed overflow-hidden form-container-info top-1/2 left-1/2 ">
-        <header className="flex justify-between text-gray-100 px-1 sm:px-3 py-2 sticky top-0 w-full">
-          <div className="w-9 h-9 shrink-0 flex justify-center items-center cursor-pointer pr-0 rounded-full hover:bg-gray-700 text-xl">
-            <button onClick={() => onClickInfo({}, false)}>
+        <header className="flex justify-between text-gray-300 px-1 sm:px-3 py-3 sticky top-0 w-full items-center">
+          <div className="w-9 h-9 shrink-0 flex justify-center items-center cursor-pointer pr-0 rounded-full hover:bg-gray-700 text-2xl ml-2">
+            <button onClick={() => onClickInfo({}, false)} className="">
               <BiArrowBack />
             </button>
           </div>
-          <div className="grow items-center flex ml-1 text-xl truncate">
+          <div className="grow items-center flex ml-1 text-xl truncate text-gray-300">
             <p className="">{scroll && contact.name}</p>
           </div>
           <div className="flex">
             <div className="w-9 h-9 flex justify-center items-center hover:bg-gray-700 rounded-full mr-1">
               <UpdateContactButton contact={contact} />
             </div>
-            <div className="w-9 h-9 shrink-0 flex justify-center rounded-full items-center cursor-pointer pr-0  hover:bg-gray-500 mr-1">
+            <div className="w-9 h-9 shrink-0 flex justify-center rounded-full items-center cursor-pointer pr-0  hover:bg-gray-700 mr-1">
               <Favorite />
             </div>
             <div className="w-9 h-9 flex justify-center items-center hover:bg-gray-700 rounded-full mr-1">
@@ -85,11 +95,11 @@ function ContactInfo({ contact, onClickInfo }) {
                 mr={0}
               />
             </div>
-            <div className="text-gray-100 font-light text-xl mt-8 w-full flex justify-center">
+            <div className="text-gray-200 font-light text-2xl mt-8 w-full flex justify-center">
               <FullName name={contact.name} lastName={contact.lastName} />
             </div>
           </div>
-          <div className="cont-btns text-sm text-blue-400 w-full">
+          <div className="cont-btns text-sm text-blue-300 w-full">
             <div className="container-btns">
               {" "}
               {/*botones similares*/}
@@ -99,21 +109,21 @@ function ContactInfo({ contact, onClickInfo }) {
               {contact.email !== "" ? <MailButton mail={true} /> : null}
             </div>
           </div>
-          <article className="py-4 px-4 mb-60 text-gray-50 ">
-            <div className="bg-gray-700 overflow-hidden rounded-xl">
+          <article className="py-4 px-3 mb-60 text-gray-200">
+            <div className="bg-gray-700 overflow-hidden rounded-xl pt-2">
               {/* INFOR DE CONTACTO*/}
-              <h3 className="py-3 font-bold ml-3">Información de contacto</h3>
+              <h3 className="py-1 font-bold ml-4 tracking-wide mt-1 mb-2">Información de contacto</h3>
               <section>
                 <div className="flex justify-between cursor-pointer py-3 items-center hover:bg-gray-600">
                   {" "}
                   {/* INFRO MOVIL */}
-                  <div className="flex items-center justify-center ">
+                  <div className="flex items-center justify-center ml-1">
                     <div className="w-10 h-10 shrink-0 text-2xl flex justify-center items-center ml-1 mr-2">
                       <CallContactButton />
                     </div>
                     <Phone phone={contact.phone} whatsApp={false} info={true} />
                   </div>
-                  <div className="w-10 h-10 shrink-0 hover:text-gray-400 text-2xl flex justify-center items-center mr-2">
+                  <div className="w-10 h-10 shrink-0 hover:text-gray-300 text-2xl flex justify-center items-center mr-2">
                     <Message />
                   </div>
                 </div>
@@ -122,7 +132,7 @@ function ContactInfo({ contact, onClickInfo }) {
                 {contact.email === "" ? (
                   <div></div>
                 ) : (
-                  <div className="flex py-3 items-center hover:bg-gray-600 cursor-pointer">
+                  <div className="flex py-3 items-center hover:bg-gray-600 cursor-pointer ml-1">
                     <div className="w-10 h-10 shrink-0 text-xl flex justify-center items-center ml-1 mr-2 truncate-text">
                       <MailButton />
                     </div>
@@ -143,7 +153,7 @@ function ContactInfo({ contact, onClickInfo }) {
               </section>
             </div>
             {/* INFRO WHATSAPP END */}
-            <div className="w-full flex flex-col text-center text-sm mt-3">
+            <div className="w-full flex flex-col text-center text-sm mt-4">
               <p>Se agregó el: 12 de mayo de 2022</p>
               <p>(gilbertmatosortiz@gmail.com)</p>
             </div>

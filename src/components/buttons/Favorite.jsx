@@ -6,7 +6,7 @@ function Favorite({hover}) {
   const efectt = hover && 'hover:text-gray-50'
   return (
     <button onClick={() => active === false ? setActive(true) : setActive(false)} className={`${efectt} text-xl`}>
-      {active ? <AiFillStar className="text-blue-500" /> : <AiOutlineStar className={`${efectt}`} />}
+      {active ? <AiFillStar className="text-blue-400" /> : <AiOutlineStar className={`${efectt}`} />}
     </button>
   );
 }

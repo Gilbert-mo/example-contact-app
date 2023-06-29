@@ -36,7 +36,7 @@ function Header({onClickInfoFound}) {
     if (x === false) {
       return [
         "bg-gray-700 flex justify-center items-center text-gray-200 rounded-full px-2 py-0",
-        "w-8 h-8 p-3 hover:bg-slate-600 rounded-ful flex justify-center items-center rounded-full",
+        "w-10 h-10 p-3 hover:bg-slate-600 rounded-ful flex justify-center items-center rounded-full",
       ];
     } else {
       return ["", "hidden"];
@@ -64,8 +64,8 @@ function Header({onClickInfoFound}) {
           >
             <div className="container mx-auto w-full">
               <div className={`${stylesFalse[0]} transition ease delay-200`}>
-                <div className={`${stylesFalse[1]} cursor-pointer`}>
-                  <button className="sm:text-xl">
+                <div className={`${stylesFalse[1]} cursor-pointer text-2xl ml-1`}>
+                  <button className="">
                     <AiOutlineSearch />
                   </button>
                 </div>
@@ -77,12 +77,12 @@ function Header({onClickInfoFound}) {
                   onClickInfoFound={onClickInfoFound}
                 />
                 <div
-                  className={`${stylesFalse[1]} cursor-pointer ${
-                    active && "text-gray-500"
+                  className={`${stylesFalse[1]} cursor-pointer text-2xl mr-4 ${
+                    active && "text-gray-500 text-2xl"
                   }`}
                 >
                   <button
-                    className="sm:text-xl"
+                    className=""
                     disabled={active}
                     onClick={() => {
                       handleRecognition();
@@ -92,7 +92,7 @@ function Header({onClickInfoFound}) {
                     <BiMicrophone />
                   </button>
                 </div>
-                <div className={`${stylesFalse[1]} cursor-pointer`}>
+                <div className={`${stylesFalse[1]} cursor-pointer text-xl mr-1`}>
                   <FaEllipsisV />
                 </div>
               </div>

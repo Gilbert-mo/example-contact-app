@@ -23,7 +23,7 @@ export const contacts = [
     }, {
         id: 4,
         profilePicture: 'img/luffy.jpg',
-        name: 'Alberto Francisco',
+        name: 'Alberto',
         lastName: 'matos mejia',
         phone: '8293895014',
         email: 'franciscoalberto123@gmail.com'
@@ -36,7 +36,7 @@ export const contacts = [
         email: 'daniellemoca999@gmail.com'
     }, {
         id: 6,
-        profilePicture: '',
+        profilePicture: 'img/zoro.jpg',
         name: 'Esteban',
         lastName: '',
         phone: '8497491634',
@@ -64,7 +64,7 @@ export const contacts = [
         email: ''
     }, {
         id: 10,
-        profilePicture: '',
+        profilePicture: 'img/usopp.jpg',
         name: 'Alex',
         lastName: '',
         phone: '8295836585',
@@ -99,14 +99,14 @@ export const contacts = [
         email: ''
     }, {
         id: 16,
-        profilePicture: '',
+        profilePicture: 'img/nami.jpg',
         name: 'Debora',
         lastName: '',
         phone: '8295836585',
         email: ''
     }, {
         id: 17,
-        profilePicture: '',
+        profilePicture: 'img/spiderman.jpg',
         name: 'Daniel',
         lastName: '',
         phone: '8295836585',
@@ -141,7 +141,7 @@ export const contacts = [
         email: ''
     }, {
         id: 22,
-        profilePicture: '',
+        profilePicture: 'img/deku.jpg',
         name: 'Manuel',
         lastName: '',
         phone: '8295836585',
@@ -155,7 +155,7 @@ export const contacts = [
         email: ''
     }, {
         id: 24,
-        profilePicture: '',
+        profilePicture: 'img/sanji.jpg',
         name: 'Juan',
         lastName: '',
         phone: '8295836585',
@@ -176,14 +176,14 @@ export const contacts = [
         email: ''
     }, {
         id: 27,
-        profilePicture: '',
+        profilePicture: 'img/batman.jpg',
         name: 'Supermercado',
         lastName: '',
         phone: '8295836585',
         email: ''
     }, {
         id: 28,
-        profilePicture: '',
+        profilePicture: 'img/chopper.jpg',
         name: 'jhon',
         lastName: '',
         phone: '8295836585',
@@ -288,8 +288,22 @@ export const contacts = [
         email: ''
     }, {
         id: 43,
-        profilePicture: '',
+        profilePicture: 'img/bakugo.jpg',
         name: 'Zoe',
+        lastName: '',
+        phone: '8295836585',
+        email: ''
+    }, {
+        id: 44,
+        profilePicture: '',
+        name: 'Ada',
+        lastName: '',
+        phone: '8295836585',
+        email: ''
+    }, {
+        id: 45,
+        profilePicture: '',
+        name: 'Eliot',
         lastName: '',
         phone: '8295836585',
         email: ''

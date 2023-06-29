@@ -2,9 +2,9 @@ import { useEffect, useState, useContext } from "react";
 import { ContactContext } from "../contexts/ContactContext";
 import { IoMdClose } from "react-icons/io";
 import { BiImageAdd } from "react-icons/bi";
-import {FaEllipsisV, FaRegUser} from 'react-icons/fa'
-import {FiMail} from 'react-icons/fi'
-import {MdOutlineCall} from 'react-icons/md'
+import { FaEllipsisV, FaRegUser } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { MdOutlineCall } from "react-icons/md";
 
 function FormContactUpdate({ contact }) {
   const { setUpdateFormActive, update } = useContext(ContactContext);
@@ -41,13 +41,32 @@ function FormContactUpdate({ contact }) {
     });
   };
 
+  useEffect(() => {
+    const handleKeyup = (e) => {
+      if (e.key === "Escape") {
+        setUpdateFormActive(false);
+      }
+
+      if (e.key === 'Enter'){
+        alert('Clic en Guardar')
+      }
+    };
+
+    document.addEventListener("keyup", handleKeyup);
+
+    return () => {
+      document.removeEventListener("keyup", handleKeyup);
+    };
+  }, []);
+
+
   return (
     <>
       <div className="dark-overlay"></div>
-      <section className="bg-gray-800 fixed form-container top-1/2 left-1/2 overflow-hidden">
+      <section className="bg-gray-800 fixed form-container top-1/2 left-1/2 overflow-hidden ">
         <form onSubmit={handlSubmit}>
-          <header className="bg-gray-700 text-gray-50 flex items-center p-2 px-3">
-            <div className="w-10 h-10 shrink-0 flex justify-center items-center text-xl rounded-full hover:bg-gray-500">
+          <header className="bg-gray-700 text-gray-200 flex items-center p-2 px-3">
+            <div className="w-10 h-10 shrink-0 flex justify-center items-center text-2xl rounded-full hover:bg-gray-500">
               <button onClick={() => setUpdateFormActive(false)}>
                 <IoMdClose />
               </button>
@@ -55,26 +74,26 @@ function FormContactUpdate({ contact }) {
             <div className="grow flex justify-start items-center text-xl ml-2 font-light ">
               <h3>Editar contacto</h3>
             </div>
-            <div className="shrink-0 flex justify-center text-black cursor-pointer items-center sm:mr-3 py-2 px-5 bg-blue-300 rounded-full hover:bg-blue-400 hover:text-gray-50">
+            <div className="shrink-0 flex justify-center text-black cursor-pointer items-center sm:mr-3 py-2 px-5 mr-2 bg-blue-300 rounded-full hover:bg-blue-400 hover:text-gray-100">
               <button className="">Guardar</button>
             </div>
-            <div className="w-10 h-10 shrink-0 flex justify-center items-center cursor-pointer pr-0 rounded-full hover:bg-gray-500">
+            <div className="w-10 h-10 shrink-0 flex justify-center items-center cursor-pointer pr-0 rounded-full hover:bg-gray-500 text-xl">
               <FaEllipsisV />
             </div>
           </header>
           <div className="py-6 flex flex-col justify-center items-center">
-            <div className="bg-blue-600 text-gray-200 w-20 h-20 flex flex-col justify-center items-center rounded-full text-3xl cursor-pointer">
+            <div className="bg-blue-800 text-gray-300 w-32 h-32 flex flex-col justify-center items-center rounded-full text-5xl cursor-pointer">
               <BiImageAdd />
             </div>
-            <div className="mt-1 py-1 px-4 hover:bg-gray-700 rounded-full text-blue-300">
+            <div className="mt-2 py-1 px-4 hover:bg-gray-700 rounded-full text-blue-300">
               <button type="button">Agregar imagen</button>
             </div>
           </div>
           <section className="h-full px-3 pl-1 sm:pl-3 inputs-container">
             <div className="input-contaiber-box input-contaiber-box-name">
               <div className="flex">
-                <div className="w-10  shrink-0 flex items-center justify-center text-gray-50 ">
-                  <label htmlFor="inputName" className="cursor-pointer">
+                <div className="w-10  shrink-0 flex items-center justify-center text-gray-200 ">
+                  <label htmlFor="inputName" className="cursor-pointer text-xl">
                     <FaRegUser />
                   </label>
                 </div>
@@ -94,7 +113,7 @@ function FormContactUpdate({ contact }) {
             </div>
             <div className="input-contaiber-box">
               <div className="flex">
-                <div className="w-10  shrink-0 flex items-center justify-center text-gray-50 ">
+                <div className="w-10  shrink-0 flex items-center justify-center text-gray-200 ">
                   <label htmlFor="inputLast" className="cursor-pointer"></label>
                 </div>
                 <div className="input-box group">
@@ -113,8 +132,11 @@ function FormContactUpdate({ contact }) {
             </div>
             <div className="input-contaiber-box">
               <div className="flex">
-                <div className="w-10  shrink-0 flex items-center justify-center text-gray-50 ">
-                  <label htmlFor="inputEmail" className="cursor-pointer">
+                <div className="w-10  shrink-0 flex items-center justify-center text-gray-200 ">
+                  <label
+                    htmlFor="inputEmail"
+                    className="cursor-pointer text-xl"
+                  >
                     <FiMail />
                   </label>
                 </div>
@@ -134,8 +156,11 @@ function FormContactUpdate({ contact }) {
             </div>
             <div className="input-contaiber-box">
               <div className="flex">
-                <div className="w-10 shrink-0 flex items-center justify-center text-gray-50 ">
-                  <label htmlFor="inputPhone" className="cursor-pointer text-xl">
+                <div className="w-10 shrink-0 flex items-center justify-center text-gray-200 ">
+                  <label
+                    htmlFor="inputPhone"
+                    className="cursor-pointer text-2xl"
+                  >
                     <MdOutlineCall />
                   </label>
                 </div>

@@ -7,7 +7,7 @@ function AddContactButton() {
     const {setAddFormActive, setUpdateFormActive} = useContext(ContactContext)
 
   return (
-    <div className='text-blue-400 font-medium hover:text-blue-300 container '>
+    <div className='text-blue-300  hover:text-blue-300 container '>
       <button onClick={() => {
         setAddFormActive(true)
         setUpdateFormActive(false)
