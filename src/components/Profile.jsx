@@ -4,7 +4,7 @@ function Profile({ path, name, mr }) {
     const orange = "bg-orange-500";
     const blue = "bg-sky-400";
     const green = "bg-green-500";
-    const yellow = "bg-yellow-400";
+    const yellow = "bg-yellow-500";
     const red = "bg-red-500";
     const pink = "bg-pink-500";
     const fuchsia = "bg-fuchsia-500";
