@@ -64,7 +64,7 @@ function FormContact() {
                 <IoMdClose />
               </button>
             </div>
-            <div className="grow flex justify-start items-center text-xl ml-2 font-light ">
+            <div className="grow flex justify-start items-center text-xl ml-2 font-medium">
               <h3>Crear contacto</h3>
             </div>
             <div className="shrink-0 flex justify-center text-black cursor-pointer items-center sm:mr-3 py-2 px-5 bg-blue-300 rounded-full hover:bg-blue-500 hover:text-gray-50 transition ease-out duration-100 mr-2">

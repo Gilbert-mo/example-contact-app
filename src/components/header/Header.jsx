@@ -52,7 +52,7 @@ function Header({onClickInfoFound}) {
           <div className="w-10 h-10 shrink-0 text-gray-100 items-center justify-center hover:bg-slate-700 rounded-full active">
             <button className="text-xl"><AiOutlineMenu /></button>
           </div>
-          <div className="logo mr-2 text-white w-28 shrink-0 cursor-pointer text-2xl font-light items-center justify-center ml-1 active">
+          <div className="logo mr-2 text-gray-200 w-28 shrink-0 cursor-pointer text-2xl font-semibold items-center justify-center ml-2 active">
             <h1>Contactos</h1>
           </div>
           <section

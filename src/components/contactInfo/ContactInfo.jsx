@@ -60,7 +60,7 @@ function ContactInfo({ contact, onClickInfo }) {
               <BiArrowBack />
             </button>
           </div>
-          <div className="grow items-center flex ml-1 text-xl truncate text-gray-300">
+          <div className="grow items-center flex ml-1 text-xl truncate text-gray-300 font-medium">
             <p className="">{scroll && contact.name}</p>
           </div>
           <div className="flex">

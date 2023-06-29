@@ -71,7 +71,7 @@ function FormContactUpdate({ contact }) {
                 <IoMdClose />
               </button>
             </div>
-            <div className="grow flex justify-start items-center text-xl ml-2 font-light ">
+            <div className="grow flex justify-start items-center text-xl ml-2 font-medium">
               <h3>Editar contacto</h3>
             </div>
             <div className="shrink-0 flex justify-center text-black cursor-pointer items-center sm:mr-3 py-2 px-5 mr-2 bg-blue-300 rounded-full hover:bg-blue-400 hover:text-gray-100">
