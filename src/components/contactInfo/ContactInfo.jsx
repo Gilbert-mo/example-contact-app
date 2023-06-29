@@ -109,7 +109,7 @@ function ContactInfo({ contact, onClickInfo }) {
               {contact.email !== "" ? <MailButton mail={true} /> : null}
             </div>
           </div>
-          <article className="py-4 px-3 mb-60 text-gray-200">
+          <article className="py-4 px-3 mb-60 text-gray-300">
             <div className="bg-gray-700 overflow-hidden rounded-xl pt-2">
               {/* INFOR DE CONTACTO*/}
               <h3 className="py-1 font-bold ml-4 tracking-wide mt-1 mb-2">Información de contacto</h3>
