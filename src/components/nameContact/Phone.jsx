@@ -24,7 +24,7 @@ function Phone({ phone, whatsApp, info }) {
     }
 
     return (
-      <div className="flex text-sm md:text-base items-center">
+      <div className="flex text-sm md:text-base items-center text-gray-300">
         <p className="mr-1">Móvil</p>
         <p className="">{phoneMovil}</p>
       </div>

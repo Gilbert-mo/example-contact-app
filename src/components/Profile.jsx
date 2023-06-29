@@ -22,7 +22,7 @@ function Profile({ path, name, mr }) {
       <div
         className={`mr-${mr} ${mr !== 0 ? ' w-12 h-12' : 'w-28 h-28'} flex items-center justify-center shrink-0 ${color} rounded-full`}
       >
-        <h2 className={`${mr === 0 ? 'text-5xl font-light ' : 'text-2xl font-medium'}`}>{nameProfile}</h2>
+        <h2 className={`${mr === 0 ? 'text-6xl font-medium ' : 'text-2xl font-medium'}`}>{nameProfile}</h2>
       </div>
     );
   }

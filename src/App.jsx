@@ -29,7 +29,7 @@ function App() {
         }}
       />
       <main className="h-screen w-full mt-14">
-        <article className="bg-gray-800 text-gray-300 h-screen overflow-y-scroll container mx-auto contact-list-container main-container">
+        <article className="bg-gray-800 text-gray-200 h-screen overflow-y-scroll container mx-auto contact-list-container main-container">
           <AddContactButton />
           <ListContact
             onClickInfo={(value, active) => {

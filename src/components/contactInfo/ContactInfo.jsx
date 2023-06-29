@@ -95,7 +95,7 @@ function ContactInfo({ contact, onClickInfo }) {
                 mr={0}
               />
             </div>
-            <div className="text-gray-200 font-light text-2xl mt-8 w-full flex justify-center">
+            <div className="text-gray-200 font-medium text-3xl mt-8 w-full flex justify-center">
               <FullName name={contact.name} lastName={contact.lastName} />
             </div>
           </div>
